@@ -15,148 +15,180 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
             min-height: 100vh;
-            color: white;
+            font-family: Arial, sans-serif;
 
             background:
-                radial-gradient(circle at top, #123c52, #06141f 45%, #02070c);
+                linear-gradient(rgba(2, 10, 18, 0.75), rgba(1, 8, 14, 0.95)),
+                url("BLOQUE.jpg");
+
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
 
             display: flex;
             justify-content: center;
+            align-items: center;
+
             padding: 30px 15px;
+
+            color: white;
         }
 
-        .pagina {
+        .contenedor {
             width: 100%;
-            max-width: 850px;
+            max-width: 700px;
+
+            background: rgba(3, 18, 29, 0.92);
+
+            border: 2px solid #35e6f5;
+
+            border-radius: 25px;
+
+            padding: 35px;
+
             text-align: center;
+
+            box-shadow:
+                0 0 15px #1bd9eb,
+                0 0 40px rgba(27, 217, 235, 0.35);
+
+            backdrop-filter: blur(5px);
         }
 
-        .titulo-pequeno {
-            display: inline-block;
-            padding: 9px 20px;
-            border: 1px solid #20dff2;
-            border-radius: 30px;
+        .icono {
+            font-size: 45px;
+            margin-bottom: 10px;
 
-            color: #20dff2;
+            text-shadow:
+                0 0 10px #2ce7f7,
+                0 0 25px #2ce7f7;
+        }
+
+        .etiqueta {
+            color: #45e8f5;
+
             font-size: 14px;
-            letter-spacing: 3px;
 
-            margin-bottom: 20px;
+            letter-spacing: 4px;
+
+            margin-bottom: 15px;
         }
 
         h1 {
-            font-size: 65px;
-            letter-spacing: 4px;
+            font-size: 52px;
+
+            color: white;
+
+            letter-spacing: 3px;
 
             text-shadow:
-                0 0 10px #20dff2,
-                0 0 25px #20dff2;
+                3px 3px 0 #087b91,
+                0 0 15px #22dbea;
 
             margin-bottom: 8px;
         }
 
-        .subtitulo {
-            font-size: 23px;
-            color: #28e5f5;
-            letter-spacing: 4px;
-            margin-bottom: 25px;
+        .nombre {
+            font-size: 20px;
+
+            color: #6debf5;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 30px;
         }
 
-        /* BLOQUE DE DIAMANTE */
+        .imagen {
+            width: 280px;
+            height: 280px;
 
-        .diamante {
-            width: 390px;
-            max-width: 90%;
+            object-fit: cover;
 
             border-radius: 20px;
 
-            display: block;
-            margin: 0 auto 25px;
-
-            filter:
-                drop-shadow(0 0 12px #16ddeb)
-                drop-shadow(0 0 30px #0b7e91);
-        }
-
-        /* TARJETA DEL AUDIO */
-
-        .audio-contenedor {
-            background: rgba(3, 24, 36, 0.92);
-
-            border: 1px solid #18d9ec;
-
-            border-radius: 25px;
-
-            padding: 30px;
+            border: 3px solid #45e8f5;
 
             box-shadow:
-                0 0 25px rgba(0, 217, 238, 0.15),
-                0 15px 40px rgba(0, 0, 0, 0.5);
+                0 0 15px #23dcea,
+                0 0 35px rgba(35, 220, 234, 0.5);
+
+            margin-bottom: 30px;
+
+            transition: 0.3s;
         }
 
-        .audio-titulo {
+        .imagen:hover {
+            transform: scale(1.04);
+
+            box-shadow:
+                0 0 25px #23dcea,
+                0 0 50px rgba(35, 220, 234, 0.7);
+        }
+
+        .audio {
+            background: rgba(1, 10, 17, 0.9);
+
+            border-radius: 18px;
+
+            padding: 25px;
+
+            border: 1px solid #1dcfe1;
+        }
+
+        .audio h2 {
             font-size: 22px;
-            margin-bottom: 20px;
-        }
 
-        .audio-titulo span {
-            color: #20e4f5;
+            margin-bottom: 20px;
+
+            color: #ffffff;
         }
 
         audio {
             width: 100%;
-            height: 55px;
+
+            height: 50px;
         }
 
         .texto {
             margin-top: 20px;
 
-            color: #c7d9df;
+            color: #b9d3d8;
 
-            font-size: 16px;
-            line-height: 1.5;
+            font-size: 15px;
+
+            line-height: 1.6;
         }
 
-        .final {
-            margin-top: 28px;
-
-            color: #25dceb;
+        .diamante {
+            color: #35e6f5;
 
             font-size: 18px;
-            letter-spacing: 1px;
+
+            margin-top: 25px;
+
+            text-shadow: 0 0 10px #1bd9eb;
         }
-
-        .pie {
-            margin-top: 18px;
-
-            color: #6e8994;
-
-            font-size: 13px;
-        }
-
-        /* CELULAR */
 
         @media (max-width: 600px) {
 
+            .contenedor {
+                padding: 25px 18px;
+            }
+
             h1 {
-                font-size: 42px;
-                letter-spacing: 2px;
+                font-size: 38px;
             }
 
-            .subtitulo {
-                font-size: 17px;
-                letter-spacing: 2px;
+            .nombre {
+                font-size: 16px;
             }
 
-            .diamante {
-                width: 300px;
+            .imagen {
+                width: 230px;
+                height: 230px;
             }
 
-            .audio-contenedor {
-                padding: 20px;
-            }
         }
 
     </style>
@@ -164,37 +196,41 @@
 
 <body>
 
-    <div class="pagina">
+    <div class="contenedor">
 
-        <div class="titulo-pequeno">
-            🎧 CLIP SONORO
+        <div class="icono">
+            🎧
+        </div>
+
+        <div class="etiqueta">
+            CLIP SONORO
         </div>
 
         <h1>
             EDWAR ÁVILA
         </h1>
 
-        <div class="subtitulo">
-            ESCÚCHALO AQUÍ
+        <div class="nombre">
+            ESCUCHA EL AUDIO
         </div>
 
 
-        <!-- IMAGEN DEL BLOQUE DE DIAMANTE -->
+        <!-- IMAGEN DEL BLOQUE -->
 
         <img
             src="BLOQUE.jpg"
             alt="Bloque de diamante"
-            class="diamante"
+            class="imagen"
         >
 
 
-        <!-- REPRODUCTOR -->
+        <!-- AUDIO -->
 
-        <div class="audio-contenedor">
+        <div class="audio">
 
-            <div class="audio-titulo">
-                🎵 <span>Reproduce el clip sonoro</span>
-            </div>
+            <h2>
+                🎵 Reproducir clip sonoro
+            </h2>
 
             <audio controls>
 
@@ -208,19 +244,14 @@
             </audio>
 
             <p class="texto">
-                Presiona el botón de reproducción para escuchar
-                el clip sonoro.
+                Presiona ▶ para escuchar el clip sonoro.
             </p>
 
         </div>
 
 
-        <div class="final">
-            💎 Gracias por escuchar
-        </div>
-
-        <div class="pie">
-            Clip sonoro
+        <div class="diamante">
+            💎 Escucha el clip completo
         </div>
 
     </div>
